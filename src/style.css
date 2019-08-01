@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
 
 .logo-netflix-top{
@@ -20,16 +19,12 @@
 .footer-color{
     color: #ffee00;
 }
-.ds{
-    margin: 0 30px 30px 0;
-}
 
-/*Carrusel:*/
 .carousel-inner{
     height: 70;
     width: auto;
 }
+.hide{
+    display: none;
+}
 
-/* #btn-buscar{
-    background-color:  #d4ac0d;
-} */
