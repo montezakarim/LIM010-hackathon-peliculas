@@ -1,19 +1,29 @@
 const movieContainer = document.getElementById('all-movies');
 const filterMovie = document.getElementById('filter-movie');
+const filterSerie = document.getElementById('filter-serie');
 const searchMovieInput = document.getElementById('input-search-movies');
 const buttonSearchMovie = document.getElementById('button-search-movies');
 
 const urlMovie = 'https://www.omdbapi.com/?t=';
-const urlSerie = 'http://www.omdbapi.com/?s=';
-const arrayPelis =['American Pie', 'The Hang over', 'The Mask', 'Scary Movie', 'Deadpool', 'Back to the Future', 'Jurassic Park', 'The Lord of the Rings', 'Harry Potter', 'Avengers', 'Pulp Fiction', 'Die Hard', 'Twelve Monkeys', 'Man on Fire', 'Kill Bill', 'The Dark Knight', 'Metropolis', 'Inception', 'A Clockwork Orange', '2001: A Space Odyssey', 'The Exorcist', ' The Shining', 'The Omen', 'Hostel', 'It',
-  'Get out','Psycho','The babadook','The cabinet of Dr. Caligari','The silence of the Lambs','Girls Trip','Zoolander','I Heart Huckabees','Tenacious D in The Pick of Destiny','Bridesmaids','Indiana Jones','Star Wars','Jumanji','Jurassic Park','Pirates of the Caribbean: The Curse of the Black Pearl','Mad Max: Fury Road','Metropolis','Gravity','War for the Planet of the Apes','Wall-E','Die Hard','Terminator 2: Judgment Day','The Dark Knight','Drive', 'E.T. The Extra-Terrestrial', 'Seven Samurai'];
-const arraySeries =['Sex Education','Glee','Outlander','Pocoyo and the Space Circus','Friends','The Sinner','Suits', 'The Flash', 'Dark', 'Breaking Bad', 'Zoo','Black Mirror: Bandersnatch', 'Merlí','Mickey Mouse Clubhouse', 'The Rain', 'Sense8','Blindspot','The OA'];
+const urlSerie = 'https://www.omdbapi.com/?s=';
+const arrayPelis = ['American Pie', 'The Hangover', 'The Mask', 'Scary Movie', 'Deadpool', 'Back to the Future', 'Jurassic Park', 'The Lord of the Rings', 'Harry Potter', 'Avengers', 'Pulp Fiction', 'Die Hard', 'Twelve Monkeys', 'Man on Fire', 'Kill Bill', 'The Dark Knight', 'Metropolis', 'Inception', 'A Clockwork Orange', '2001: A Space Odyssey', 'The Exorcist', ' The Shining', 'The Omen', 'Hostel', 'It',
+  'Get out', 'Psycho', 'The babadook', 'The cabinet of Dr. Caligari', 'The silence of the Lambs', 'Girls Trip', 'Zoolander', 'I Heart Huckabees', 'Tenacious D in The Pick of Destiny', 'Bridesmaids', 'Indiana Jones', 'Star Wars', 'Jumanji', 'Jurassic Park', 'Pirates of the Caribbean: The Curse of the Black Pearl', 'Mad Max: Fury Road', 'Metropolis', 'Gravity', 'War for the Planet of the Apes', 'Wall-E', 'Die Hard', 'Terminator 2: Judgment Day', 'The Dark Knight', 'Drive', 'E.T. The Extra-Terrestrial', 'Seven Samurai'];
+const arraySerie = ['Sex Education', 'Glee', 'Outlander', 'Pocoyo and the Space Circus', 'Friends', 'The Sinner', 'Suits', 'The Flash', 'Dark', 'Breaking Bad', 'Zoo', 'Black Mirror: Bandersnatch', 'Merlí', 'Mickey Mouse Clubhouse', 'The Rain', 'Sense8', 'Blindspot', 'The OA'];
+
+app.showAllMovieSerie(urlSerie, arraySerie);
+
 // app.showAllMovieSerie(urlMovie,arrayPelis);
-app.showAllMovieSerie(urlSerie,arraySeries);
+
+// const showMovies = (event) => {
+// 	event.preventDefault();
+// 	app.showAllMovieSerie(urlMovie,arrayPelis);
+// };
+// filterMovie.addEventListener('click', showMovies);
+
 // const createTemplateCard = list => {
 //   let templateCard = '';
-//   list.forEach(element => {
-//     const card = `
+// 	list.forEach(element => {
+// 		const card = `
 //         <div class="card col-lg-3 col-md-6 col-sm-12">
 //          <div class="card-body" style="width = 20rem;">
 //            <img src="${element.Poster}" class="card-img-top" alt="${element.Title}">
@@ -22,11 +32,16 @@ app.showAllMovieSerie(urlSerie,arraySeries);
 //            </div>
 //          </div>
 //         </div>`;
-//     templateCard += card;
-//   });
+// 			templateCard += card;
+// 	});
 //   movieContainer.innerHTML = templateCard;
 // };
 
+const showSerie = (event) => {
+	event.preventDefault();
+	app.showAllMovieSerie(urlSerie,arraySerie);
+};
+filterSerie.addEventListener('click', showSerie);
 const createTemplateCard = list => {
   let templateCard = '';
   list.forEach(element => {
@@ -43,3 +58,9 @@ const createTemplateCard = list => {
   });
   movieContainer.innerHTML = templateCard;
 };
+const searchMovies = () =>{
+	let newArraySearch = new Array();
+	newArraySearch.push(searchMovieInput.value);
+	app.showAllMovieSerie(urlMovie, newArraySearch);
+};
+buttonSearchMovie.addEventListener('click',searchMovies);
