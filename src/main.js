@@ -1,9 +1,9 @@
 const movieContainer = document.getElementById('all-movies');
+const billboard = document.getElementById('billboard');
 const filterMovie = document.getElementById('filter-movie');
 const filterSerie = document.getElementById('filter-serie');
 const searchMovieInput = document.getElementById('input-search-movies');
 const buttonSearchMovie = document.getElementById('button-search-movies');
-
 const urlMovie = 'https://www.omdbapi.com/?t=';
 const urlSerie = 'https://www.omdbapi.com/?s=';
 const arrayPelis = ['American Pie', 'The Hangover', 'The Mask', 'Scary Movie', 'Deadpool', 'Back to the Future', 'Jurassic Park', 'The Lord of the Rings', 'Harry Potter', 'Avengers', 'Pulp Fiction', 'Die Hard', 'Twelve Monkeys', 'Man on Fire', 'Kill Bill', 'The Dark Knight', 'Metropolis', 'Inception', 'A Clockwork Orange', '2001: A Space Odyssey', 'The Exorcist', ' The Shining', 'The Omen', 'Hostel', 'It',
@@ -11,9 +11,7 @@ const arrayPelis = ['American Pie', 'The Hangover', 'The Mask', 'Scary Movie', '
 const arraySerie = ['Sex Education', 'Glee', 'Outlander', 'Pocoyo and the Space Circus', 'Friends', 'The Sinner', 'Suits', 'The Flash', 'Dark', 'Breaking Bad', 'Zoo', 'Black Mirror: Bandersnatch', 'Merlí', 'Mickey Mouse Clubhouse', 'The Rain', 'Sense8', 'Blindspot', 'The OA'];
 
 app.showAllMovieSerie(urlSerie, arraySerie);
-
 // app.showAllMovieSerie(urlMovie,arrayPelis);
-
 // const showMovies = (event) => {
 // 	event.preventDefault();
 // 	app.showAllMovieSerie(urlMovie,arrayPelis);
