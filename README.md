@@ -1,100 +1,171 @@
-# "Hackathon" de final de _Common Core_
+
+# Hackathon de Películas - Netflix Top
 
 ## Índice
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+- [Título del proyecto:](##Título-del-proyecto:)
+- [Resumen:](##Resumen:)
+- [Objetivos:](##Objetivos:)
+- [Investigación UX:](##Investigación-UX:)
+  - [1) Descubrimiento e investigación (Research):](###1-Descubrimiento-e-investigación-(Research):)
+  - [2) Síntesis y definición:](###2-Síntesis-y-definición:)
+  - [3) Ideación:](###3-Ideación:)
+  - [4) Prototipado:](###4-Prototipado:)
+     - [PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN MOBILE:](####PROTOTIPO-DE-BAJA-FIDELIDAD---VERSIÓN-MOBILE:)
+     - [PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN DESKTOP:](####PROTOTIPO-DE-BAJA-FIDELIDAD---VERSIÓN-DESKTOP:)
+     - [PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN MOBILE:](####PROTOTIPO-DE-ALTA-FIDELIDAD---VERSIÓN-MOBILE:)
+    - [PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN DESKTOP:](####PROTOTIPO-DE-ALTA-FIDELIDAD---VERSIÓN-DESKTOP:)
+  - [5) User Testing:](###5-User-Testing:)
 
  ***
 
-## Preámbulo
+## Título del proyecto:
+ NETFLIX TOP
+ 
+## Resumen:
+<b>Netflix Top</b> es una web dirigida a los más de 130 millones de suscriptores de Netflix, que les permite obtener información actualizada de las películas y series más recomendadas de entre todas las que se encuentran actualmente disponibles en la plataforma. Todo ello gracias a que cuenta con una interfaz amigable que además de mostrar el trailer e información de la películo o serie, las filtra por categorías cinematográficas y las ordena por años, con la finalidad de que nuestros usuarios tengan la libertad de ver la lista de recomendaciones según el género de su agrado y año de publicación.
 
-Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Hulu, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
 
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
+## - Objetivos:
+El objetivo de Netflix Top es recomendarle a sus usuarios las mejores y más recomendadas películas o series que puedan encontrar en la plataforma de Netflix, para asegurarles una buena experiencia.
 
-## Resumen del proyecto
+## Investigación UX:
+Para el desarrollo de la investigación UX, seguimos las 5 fases del proceso de diseño de experiencia de usuario:
 
-Durante estos días crearán el producto que ustedes deseen alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieran!
+### 1) Descubrimiento e investigación (Research):
+#### Investigación Contextual:
+Nuestros usuarios son suscriptores o futuros suscriptores de la plataforma de streaming, Netflix. 
+Se observa que los usuarios son personas de género y edad indistinta, con conocimiento intermedio del uso de tecnologías y aplicaciones móviles. Estos usuarios se caracterizan principalmente por ser amantes de las películas y series de diversos géneros, quienes disfrutan verlas en casa o desde un dispositivo móvil. 
 
-## Consideraciones generales
+✓ En éste punto se realizaron entrevistas a 3 usuarios de diferentes edades. (Archivo digital de entrevista realizada: https://drive.google.com/drive/folders/11ztplsycDBON0fzXqdGahNXjN_wcUOI_?usp=sharing ). De éstas entrevistas se obtuvo una idea más clara y concisa del perfil y necesidades de nuestros usuarios.
 
-* Este proyecto se debe resolver en equipos de hasta 4 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
+  
+### 2) Síntesis y definición:
+En la etapa de Investigación Contextual se reconció de forma clara el perfil común de un usuario, además de sus necesidades. En este punto se usará los datos coleccionados para idear el desarrollo de la web.
+#### Entendimiento de necesidades y requerimientos (Historias de Usuario):
+##### - Historia de usuario 1 
+Como usuario quiero poder visualizar una lista de todas las películas y series más recomendadas de Netflix.
+##### - Historia de usuario 2
+Como usuario quiero poder visualizar una lista de películas y otra de series para reconocerlas mejor y saber cómo buscarlas en la plataforma de Netflix.
+##### -  Historia de usuario 3
+Como usuaria quiero poder filtrar las películas y series según su género cinematográfico para elegir una según el de mi preferencia.
+##### - Historia de usuario 4
+Como usuario quiero poder buscar una película o serie por su título para saber si ésta es recomendada o no.
+##### - Historia de usuario 5
+Como usuario quiero poder elegir una película o serie del listado para poder visualizar mayores detalles de la misma.
+##### - Historia de usuario 6
+Como usuario quiero poder ordenar las películas o series por año de publicación para saber cuáles son las más modernas o antigüas de la plataforma.
 
-## Objetivos de aprendizaje
 
-* Enfrentarse a un reto de corta duración en el que pongan en práctica todo
-lo aprendido hasta ahora.
-* Que sigan desarrollando sus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+### 3) Ideación:
+<!-- En este punto se sabe que el foco es la cantidad en vez de la calidad, por lo que se idearon y maquetaron varias posibles propuestas para cada funcionalidad a implementar. A continuación se mostrarán principalmente los bocetos de aquellas pantallas de las cuales recibimos feedback que nos indicaba mejorar o cambiar la interfaz.
 
-## Parte Obligatoria
+##### - Bocetos de ideación para las funcionalidad:
 
-* Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_ (_project_ de Github).
-* El `README` debe contener un resumen de qué trata el proyecto, el _research_ 
-y los _sketches_.
-* El proyecto deberá presentarse publicado en github pages (no se aceptará 
-demos en local)
+- <b>PANTALLA DE INICIO:</b>
+La primera pantalla maquetada fue la de inicio, puesto que la de login ya estaba preestablecida para el proyecto. 
+En ésta pantalla se consideró un espacio en la parte izquierda para mostrar la imagen y datos del usuario. Además de un menú de fijo que mostrara las opciones entre las que podría elegir el usuario.
 
-## Consideraciones técnicas
+  -----imagen
 
-* El diseño visual de los componentes es de libre elección de ustedes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Tienen libertad de utilizar las tecnologías que deseen (framework de CSS, 
-plugins, etc).
+   ✓ <b>Luego de feedback:</b> Reconocimos que la interfaz ideada no era muy amigable y entendible para el usuario, que no quedaba muy claro lo que mostraría cada una de las opciones en el menú. Que el menú estático ocupaba mucho espacio.
 
-## Horario
 
-|       | Miércoles               | Jueves                       | Viernes                 | 
-|------ | ------------------------| ---------------------------- | ----------------------- | 
-| 8:00  | Kick off hackaton       | Daily por squad              | Hacking                 |      
-| 9:00  | Sesión de planificación | Hacking                      | Hacking                 | 
-| 10:00 | Hacking                 | Compartir link de aplicación | Detalles finales        |
-| 11:00 |                         | Presentación y Feedback      | Feria de demostraciones |    
-| 12:00 |                         |                              | Deliberación            |                  
+- <b>PANTALLA DE INICIO - LUEGO DEL 1ER FEEDBACK:</b>
+Para ésta edición se planteo incluir un menpu de tipo hamburguesa que permitiese la selección de cada una de las opción de navegación, sin ocupar demasiado espacio dentro de la pantalla.
 
-## Tips para la organización de trabajo entre UX y Front end 
+  -----imagen
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se 
-organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo
-y a crear componentes atómicos que luego les sea fácil personalizar con CSS y 
-utilizar para crear interfaces más complejas. Además, las FE empiezan también a 
-trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de 
-estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar 
-los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Deberán tener en el planning, historias de usuario, criterios de aceptación y 
-definición de terminado.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y 
-retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
+  ✓ <b>Luego de feedback:</b> Se notó que el menú de tipo hamburguesa tampoco era el adecuado debido a que no permitía mostrar visiblemente el acceso entre una y otra opción, inclusibe en algunas oportunidades algunos usuarios no notaban el logo del menú y no les era posible ir hacia otra opción además hacía falta implementar un header y un footer para darle estatus y seriedad a la interfaz. Además se nos sugirió que implementásemos un header y footer fijo, con la finalidad de darle estatus e información a nuestra interfaz.
 
-## ¿Qué es la Feria de demos?
 
-La feria de demos se realizará el día viernes, consiste en la dinámica de “speed dating”, 
-cada squad presentará su demo durante 3 minutos a un grupo de personas. Luego de los 3 
-minutos sonará una alarma y el grupo de personas rotará al siguiente squad, de esta forma 
-deberán presentar durante una hora. 
+- <b>PANTALLA DE INICIO - LUEGO DEL 2DO FEEDBACK:</b>
+En ésta pantalla se cambió el menú de tipo hamburguesa por uno de navegación que se mantendría fijo a modo de header en toda la experiencia de uso, excepto la pantalla de login y de bloqueo. Además se cumplió con implementar un footer.
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías 
-usadas.
+   -----imagen
+  ✓ <b>Luego de feedback:</b>
+  En éste feedback rescatamos la idea de que darle un espacio con información de usuario era innecesaria, puesto que lo más importante para nuestros usuarios era tener acceso directo, ordenado y fluido a la indormación de sus pókemon mas que a la suya.
+
+- <b>PANTALLA DE BLOQUEO:</b>
+  Para la pantalla de bloqueo inicialmente decidimos colocar una imágen de signo de admiración en el centro, añadido al mensaje de indicación para el usuario, luego de haber excesidido el número de posibilidades de intento de login.
+
+  -----imagen
+
+  ✓ <b>Luego de feedback:</b>
+  El feedback para ésta pantalla nos indicaba que la imagen en el centro era demasiado invasiva y algo desagradable porque alertaba de forma 'poco amigable' que no podía seguir. -->
+
+
+### 4) Prototipado:
+En éste punto procedimos a unir insights adquiridas en el proceso de Ideación y los feedbacks para lograr obtener una interfaz adecuada y y amigable para el tipo de usuario.
+
+#### - PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN MOBILE:
+ 
+  ##### . Pantalla de Inicio:
+
+  ##### . Pantalla de opción Género:
+
+  ##### . Pantalla de opción Filtrar:
+
+  ##### . Pantalla de detalle de película o serie:
+
+
+#### - PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN DESKTOP:
+ ##### . Pantalla de Inicio:
+
+  ##### . Pantalla de opción Género:
+
+  ##### . Pantalla de opción Filtrar:
+
+  ##### . Pantalla de detalle de película o serie:
+
+### - PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN MOBILE:
+* Herramienta utilizada: Figma 
+   
+   Link del prototipo en figma: https://www.figma.com/file/9yFifZHZGroZAHjDzAdMRu/Data-lovers-Copy?node-id=1%3A2
+##### . Pantalla de Inicio:
+
+  ##### . Pantalla de opción Género:
+
+  ##### . Pantalla de opción Filtrar:
+
+  ##### . Pantalla de detalle de película o serie:
+
+
+#### - PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN DESKTOP:
+##### . Pantalla de Inicio:
+
+  ##### . Pantalla de opción Género:
+
+  ##### . Pantalla de opción Filtrar:
+
+  ##### . Pantalla de detalle de película o serie:
+
+
+<!-- ### - Resumen de feedback para el diseño de Alta Fidelidad:
+Luego de los feedbacks recibidos decidimos y como se observa en el prototipado final, se implementó una pantalla , llamada "Pantalla de Inicio" en la que además de darle la bienvenida a nuestros usuarios, les daríamos algunas indicaciones de la utilidad de la wed y las funciones que en ella encontrará.
+
+<b>El feedback para algunas de nuestras pantallas fue el siguiente:
+
+Pantalla pokedex:</b>
+- Agregar una imagen al lado de la palabra incubadora en el navegador.
+- Eliminar el usuario del menú superior, puesto que ocupaba espacio innecesario y mostraba información irrelevante.
+- Cambiar texto de información por pokemones atrapados y pokemones no atrapados.
+- Cambiar el orden para mostrar pokemones por imagen,nombre y número.
+
+<b>Footer:</b>
+- Ponerle un background que permitiera sistinguir el footer de los demás elementos de la interfaz.
+
+<b>Pantalla de bloqueo:</b>
+- Decidimos reemplazar la imagen del triàngulo de admiración por un fondo de pantalla  acorde al tema pokemon y conservamos el texto.
+
+En un siguiente feedback del prototipo en figma nos sugirieron cambiar el color de fondo del contenedor de cada pokemon  para que se visualice mejor. Por lo que decidimos cambiarlo de color blanco con opacidad a negro con opacidad. -->
+
+
+### 5) User Testing:
+Para ésta fase del proceso de Desarrollo del diseño, se realizaron pruebas de usabilidad a usuarios finales. A los cuales se les asignó una "Lista de tareas" que debían llevar a cabo en la interfaz de la web, sin que se le diera mayores indicaciones de uso. Además se les realizó una lista de preguntas con la finalidad de obtener feedback y asegurarnos que nuestra interfaz cumplía con las reglas de usabilidad necesarias según nuestro tipo de usuario.
+
+  ✓ De las pruebas de usabilidad realizadas a los usuarios se obtuvieron, a modo de archivo digitales, grabaciones de audio, los cuales se pueden ontener en el siguiente link: https://drive.google.com/drive/folders/1WS7TPIvu-c8ZdSIeFVWUToKAtMpyKHQK?usp=sharing )
+
+De acuerdo al Testing con los usuarios en mensión, nuestra web cumple con los estandares de usabilidad y es de architectura amigable, porque navegar en la interfaz es sencillo y preciso, además de que muestra la data que el usuario desea obtener, mas no información irrelevante.
+Otra de las finalidad del testing con usuario, fue comprobar que si se habían priorizado las funcionalidades requeridas, lo cual, según feedback, fue favorable.
 
