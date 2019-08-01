@@ -14,6 +14,9 @@
 .nav-link{
     color: #f8f9fa !important;
 }
+.form-container{
+    margin: 100px 0px 50px 0px;
+}
 .footer-color{
     color: #ffee00;
 }
@@ -23,6 +26,10 @@
 
 /*Carrusel:*/
 .carousel-inner{
-    height: 55%;
+    height: 70;
     width: auto;
 }
+
+/* #btn-buscar{
+    background-color:  #d4ac0d;
+} */
