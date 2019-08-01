@@ -4,7 +4,7 @@ showAllMovieSerie: (url, arrayData) =>{
     for (let i=0; i< arrayData.length; i++)
     {   
        let url_pelis = url+arrayData[i]+'&apikey=4c2bc917' 
-       fetch(url_pelis ) 
+       fetch(url_pelis) 
       .then(response => response.json())
       .then(data => {
         localStorage.setItem('data', JSON.stringify(data))
