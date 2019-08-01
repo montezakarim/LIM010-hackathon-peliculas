@@ -1,6 +1,6 @@
+const objPelis=[];
 const app= {
   showAllMovieSerie: (url, arrayData) =>{
-    const objPelis=[];
       for (let i=0; i< arrayData.length; i++)
       {   
          let url_pelis = url+arrayData[i]+'&apikey=4c2bc917'
@@ -15,4 +15,11 @@ const app= {
         .catch(err => (err))
       }
   },
+  filterGeneroMovie: (generoId, objPelis) => {
+    const filtroporGenero = generoId.filter(generoId =>  generoId.Genre.includes(objPelis));
+    //console.log(generoId);
+          //console.log(filtroporGenero);
+    return filtroporGenero
+},
   };
+  window.app = app;
