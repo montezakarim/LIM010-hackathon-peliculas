@@ -35,13 +35,12 @@ const createTemplateCard = list => {
   movieContainer.innerHTML = templateCard;
 };
 
-
 apps.showAllMovieSeries(urlSerie, arraySerie);
 const showSerie = (event) => {
   event.preventDefault();
   apps.showAllMovieSeries(urlSerie, arraySerie);
-
 };
+
 filterSerie.addEventListener('click', showSerie);
 const createTemplateCardSeries = list => {
   let templateCard = '';
