@@ -4,6 +4,8 @@ const filterMovie = document.getElementById('filter-movie');
 const filterSerie = document.getElementById('filter-serie');
 const searchMovieInput = document.getElementById('input-search-movies');
 const buttonSearchMovie = document.getElementById('button-search-movies');
+const carousel = document.getElementById('carousel')
+
 const urlMovie = 'https://www.omdbapi.com/?t=';
 const urlSerie = 'https://www.omdbapi.com/?s=';
 const arrayPelis = ['American Pie', 'The Hangover', 'The Mask', 'Scary Movie', 'Deadpool', 'Back to the Future', 'Jurassic Park', 'The Lord of the Rings', 'Harry Potter', 'Avengers', 'Pulp Fiction', 'Die Hard', 'Twelve Monkeys', 'Man on Fire', 'Kill Bill', 'The Dark Knight', 'Metropolis', 'Inception', 'A Clockwork Orange', '2001: A Space Odyssey', 'The Exorcist', ' The Shining', 'The Omen', 'Hostel', 'It',
@@ -42,9 +44,9 @@ const showSerie = (event) => {
 filterSerie.addEventListener('click', showSerie);
 const createTemplateCard = list => {
   let templateCard = '';
-  list.forEach(element => {
-    const card = `
-        <div class="card col-lg-3 col-md-6 col-sm-12">
+	list.forEach(element => {
+		const card = `
+        <div class="card col-lg-3 col-md-6 col-sm-12 template">
          <div class="card-body" style="width = 20rem;">
            <img src="${element.Search[0].Poster}" class="card-img-top" alt="${element.Search[0].Title}">
            <div class="card-body">
@@ -59,6 +61,7 @@ const createTemplateCard = list => {
 const searchMovies = () =>{
 	let newArraySearch = new Array();
 	newArraySearch.push(searchMovieInput.value);
-	app.showAllMovieSerie(urlMovie, newArraySearch);
+  app.showAllMovieSerie(urlMovie, newArraySearch);
+  carousel.classList.add('hide')
 };
 buttonSearchMovie.addEventListener('click',searchMovies);
