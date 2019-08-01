@@ -2,6 +2,7 @@ const movieContainer = document.getElementById('all-movies');
 const filterMovie = document.getElementById('filter-movie');
 const searchMovieInput = document.getElementById('input-search-movies');
 const buttonSearchMovie = document.getElementById('button-search-movies');
+const carousel = document.getElementById('carousel')
 
 const urlMovie = 'https://www.omdbapi.com/?t=';
 const urlSerie = 'https://www.omdbapi.com/?s=';
@@ -21,7 +22,7 @@ const createTemplateCard = list => {
   let templateCard = '';
 	list.forEach(element => {
 		const card = `
-        <div class="card col-lg-3 col-md-6 col-sm-12">
+        <div class="card col-lg-3 col-md-6 col-sm-12 template">
          <div class="card-body" style="width = 20rem;">
            <img src="${element.Poster}" class="card-img-top" alt="${element.Title}">
            <div class="card-body">
@@ -37,6 +38,7 @@ const createTemplateCard = list => {
 const searchMovies = () =>{
 	let newArraySearch = new Array();
 	newArraySearch.push(searchMovieInput.value);
-	app.showAllMovieSerie(urlMovie, newArraySearch);
+  app.showAllMovieSerie(urlMovie, newArraySearch);
+  carousel.classList.add('hide')
 };
 buttonSearchMovie.addEventListener('click',searchMovies);
