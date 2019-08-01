@@ -16,13 +16,10 @@ showAllMovieSerie: (url, arrayData) =>{
     }
 },
 };
-window.app = app;
 
-console.log(app.movieData);
-
-
-const searchMovie = (data,peli) => {
-    const results = data.filter(obj => obj.title.toLowerCase().startsWith(peli));
-    return results;
+const searchMovie = (arrayData, peli) => {
+    const results = arrayData.filter(obj => obj.title.toLowerCase().startsWith(peli));
+    return results;    
 };
+window.app = app;
 window.searchMovie = searchMovie;
