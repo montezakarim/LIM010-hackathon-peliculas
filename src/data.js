@@ -1,25 +1,19 @@
 const app= {
-showAllMovieSerie: (url, arrayData) =>{
-  const objPelis=[];
-    for (let i=0; i< arrayData.length; i++)
-    {   
-       let url_pelis = url+arrayData[i]+'&apikey=4c2bc917'
-       fetch(url_pelis ) 
-      .then(response => response.json())
-      .then(data => {
-        localStorage.setItem('data', JSON.stringify(data))
-        objPelis.push(data);
-        createTemplateCard(objPelis)
-       return objPelis;   
-      })   
-      .catch(err => (err))
-    }
-},
-};
-
-const searchMovie = (arrayData, peli) => {
-    const results = arrayData.filter(obj => obj.title.toLowerCase().startsWith(peli));
-    return results;    
+  showAllMovieSerie: (url, arrayData) =>{
+     const objPelis=[];
+      for (let i=0; i< arrayData.length; i++) {   
+           let url_pelis = url+arrayData[i]+'&apikey=4c2bc917'
+           fetch(url_pelis ) 
+          .then(response => response.json())
+          .then(data => {
+            localStorage.setItem('data', JSON.stringify(data))
+            objPelis.push(data);
+            createTemplateCard(objPelis)
+            return objPelis;   
+            })   
+          .catch(err => (err))
+      }
+  },
 };
 window.app = app;
-window.searchMovie = searchMovie;
+
