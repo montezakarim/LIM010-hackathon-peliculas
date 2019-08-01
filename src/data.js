@@ -16,13 +16,9 @@ showAllMovieSerie: (url, arrayData) =>{
     }
 },
 };
-<<<<<<< HEAD
 window.app = app;
 
 console.log(app.movieData);
-=======
-window.app = app;   
->>>>>>> 31a725149c2ee0967ca972d89b81dbe66db72ee3
 
 
 const searchMovie = (data,peli) => {
