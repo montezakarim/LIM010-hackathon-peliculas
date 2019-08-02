@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
-
 .logo-netflix-top{
     height: 50px;
 }
@@ -16,6 +15,7 @@
 .form-container{
     margin: 100px 0px 50px 0px;
 }
+
 .footer-color{
     color: #ffee00;
 }
@@ -27,4 +27,6 @@
 .hide{
     display: none;
 }
-
+#product-name{
+color:#FFD700;
+}
