@@ -12,9 +12,18 @@ const arrayPelis = ['American Pie', 'The Hangover', 'The Mask', 'Scary Movie', '
   'Get out', 'Psycho', 'The babadook', 'The cabinet of Dr. Caligari', 'The silence of the Lambs', 'Girls Trip', 'Zoolander', 'I Heart Huckabees', 'Tenacious D in The Pick of Destiny', 'Bridesmaids', 'Indiana Jones', 'Star Wars', 'Jumanji', 'Jurassic Park', 'Pirates of the Caribbean: The Curse of the Black Pearl', 'Mad Max: Fury Road', 'Metropolis', 'Gravity', 'War for the Planet of the Apes', 'Wall-E', 'Die Hard', 'Terminator 2: Judgment Day', 'The Dark Knight', 'Drive', 'E.T. The Extra-Terrestrial', 'Seven Samurai'];
 const arraySerie = ['Sex Education', 'Glee', 'Outlander', 'Pocoyo and the Space Circus', 'Friends', 'The Sinner', 'Suits', 'The Flash', 'Dark', 'Breaking Bad', 'Zoo', 'Black Mirror: Bandersnatch', 'Merlí', 'Mickey Mouse Clubhouse', 'The Rain', 'Sense8', 'Blindspot', 'The OA'];
 app.showAllMovieSerie(urlMovie, arrayPelis);
+const searchMovies = () => {
+  let newArraySearch = new Array();
+  newArraySearch.push(searchMovieInput.value);
+  app.showAllMovieSerie(urlMovie, newArraySearch);
+  carousel.classList.add('hide')
+};
+buttonSearchMovie.addEventListener('click', searchMovies);
+
 const showMovies = (event) => {
   event.preventDefault();
   app.showAllMovieSerie(urlMovie, arrayPelis);
+  carousel.classList.remove('hide')
 };
 filterMovie.addEventListener('click', showMovies);
 
@@ -39,6 +48,7 @@ apps.showAllMovieSeries(urlSerie, arraySerie);
 const showSerie = (event) => {
   event.preventDefault();
   apps.showAllMovieSeries(urlSerie, arraySerie);
+  carousel.classList.remove('hide')
 };
 
 filterSerie.addEventListener('click', showSerie);
@@ -58,10 +68,3 @@ const createTemplateCardSeries = list => {
   });
   movieContainer.innerHTML = templateCard;
 };
-const searchMovies = () => {
-  let newArraySearch = new Array();
-  newArraySearch.push(searchMovieInput.value);
-  app.showAllMovieSerie(urlMovie, newArraySearch);
-  carousel.classList.add('hide')
-};
-buttonSearchMovie.addEventListener('click', searchMovies);
