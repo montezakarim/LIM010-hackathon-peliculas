@@ -36,3 +36,5 @@ const apps = {
 
 window.app = app;
 window.apps = apps;
+
+
