@@ -2,8 +2,7 @@ const movieContainer = document.getElementById('all-movies');
 const billboard = document.getElementById('billboard');
 const filterMovie = document.getElementById('filter-movie');
 const filterSerie = document.getElementById('filter-serie');
-const searchMovieInput = document.getElementById('input-search-movies');
-const buttonSearchMovie = document.getElementById('button-search-movies');
+
 const carousel = document.getElementById('carousel')
 
 const urlMovie = 'https://www.omdbapi.com/?t=';
@@ -57,11 +56,29 @@ const showCartelera = (event) => {
 };
 billboard.addEventListener('click', showCartelera);
 
+const searchMovieInput = document.getElementById('input-search-movies');
+const buttonSearchMovie = document.getElementById('button-search-movies');
+
 buttonSearchMovie.addEventListener('click', () => {
+  let valueSearch;
   debugger;
-  const valueSearch = searchMovieInput.value;
-  app.showSearch(`https://www.omdbapi.com/?s=${encodeURI(valueSearch)}&apikey=8395a4e3`);
+   valueSearch = searchMovieInput.value;
+  showSearchMovie(`https://www.omdbapi.com/?s=${encodeURI(valueSearch)}&apikey=8395a4e3`);
 });
+
+const showSearchMovie = (url) => {
+  fetch(url)
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      createTemplateCard(data.Search)
+    })
+    .catch(error => {
+      return error;
+    });
+};
+
 
 /* const dropdownGenero = document.getElementsByClassName('dropdown-item');
 console.log(dropdownGenero);
