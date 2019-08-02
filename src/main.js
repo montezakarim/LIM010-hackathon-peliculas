@@ -15,6 +15,7 @@ app.showAllMovieSerie(urlMovie, arrayPelis);
 const showMovies = (event) => {
   event.preventDefault();
   app.showAllMovieSerie(urlMovie, arrayPelis);
+  carousel.classList.remove('hide')
 };
 filterMovie.addEventListener('click', showMovies);
 
@@ -39,6 +40,7 @@ apps.showAllMovieSeries(urlSerie, arraySerie);
 const showSerie = (event) => {
   event.preventDefault();
   apps.showAllMovieSeries(urlSerie, arraySerie);
+  carousel.classList.remove('hide')
 };
 
 filterSerie.addEventListener('click', showSerie);
