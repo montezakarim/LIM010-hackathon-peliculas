@@ -19,7 +19,6 @@
 .footer-color{
     color: #ffee00;
 }
-
 .carousel-inner{
     height: 70;
     width: auto;
@@ -28,5 +27,28 @@
     display: none;
 }
 #product-name{
+<<<<<<< HEAD
 color:#FFD700;
 }
+=======
+color:white;
+}
+.card-body{
+    background-color: rgba(66, 62, 55, 0.863);
+}
+.card-body:hover{
+    transform: scale(1.06) !important;
+ }
+.card{
+    margin-top: 20px;
+    border: 0 !important;
+    background-color: #141414 !important;
+}
+
+body{
+    background-color: #0d0c0c !important;
+}
+#product-name{
+    color:#FFD700;
+    }
+>>>>>>> 299ed7ba55aaa1231c8be253154ff6c50f13bc54
